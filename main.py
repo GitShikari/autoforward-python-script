@@ -5,8 +5,9 @@ API_ID = int(os.environ.get("API_ID"))
 API_HASH = os.environ.get("API_HASH")
 CHAT_ID = int(os.environ.get("CHAT_ID"))
 PER_USER = os.environ.get("PER_USER")
+SESSION_STRING =os.environ.get("SESSION")
 
-app = pyrogram.Client("my_account",api_id=API_ID,api_hash=API_HASH)
+app = pyrogram.Client("my_account",api_id=API_ID,api_hash=API_HASH,session_string=SESSION_STRING)
 app.start()
 app.send_message("me", "Greetings from **Pyrogram**!")
 id=0
