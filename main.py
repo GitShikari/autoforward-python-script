@@ -1,6 +1,6 @@
 import pyrogram, os
-import dotenv
-dotenv.load_dotenv()
+# import dotenv
+# dotenv.load_dotenv()
 API_ID = int(os.environ.get("API_ID"))
 API_HASH = os.environ.get("API_HASH")
 CHAT_ID = int(os.environ.get("CHAT_ID"))
