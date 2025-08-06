@@ -12,7 +12,7 @@ SESSION_STRING =os.environ.get("SESSION")
 app = pyrogram.Client("my_account",api_id=API_ID,api_hash=API_HASH,session_string=SESSION_STRING,sleep_threshold=0)
 # app.start()
 
-@app.on_message(pyrogram.filters.chat(CHAT_ID1) | pyrogram.filters.chat(CHAT_ID2))
+@app.on_message(pyrogram.filters.chat(CHAT_ID2))
 async def message_handler(client,message):
   print(message)
   await app.send_message(PER_USER,message.text)
