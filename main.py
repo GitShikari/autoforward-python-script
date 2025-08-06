@@ -15,7 +15,7 @@ app = pyrogram.Client("my_account",api_id=API_ID,api_hash=API_HASH,session_strin
 @app.on_message(pyrogram.filters.chat(CHAT_ID1) | pyrogram.filters.chat(CHAT_ID2))
 async def message_handler(client,message):
   print(message)
-  app.send_message(PER_USER,message.text)
+  await app.send_message(PER_USER,message.text)
     
       
       # time.sleep(10)
